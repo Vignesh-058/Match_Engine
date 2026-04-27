@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Word Match Engine</title>
+    <link rel="stylesheet" href="./src/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="controls">
+      <select id="collection-select" title="Change Word Collection">
+        <option value="fruits">Fruits</option>
+        <option value="programming">Programming</option>
+        <option value="vehicles">Vehicles</option>
+        <option value="animals">Animals</option>
+      </select>
+
+      <button id="theme-toggle" title="Toggle Dark/Light Mode">
+        <span class="icon">☀️</span>
+      </button>
+    </div>
+
+    <div class="container">
+      <h2 id="main-title">Word Match Engine</h2>
+
+      <div id="word-list"></div>
+
+      <div class="input-wrapper" style="position: relative; width: 100%;">
+        <input type="text" id="input" placeholder="Start typing freely..." autocomplete="off" />
+        <div id="particle-container"></div>
+      </div>
+
+      <div class="score-box">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="percentage"><span id="percentage">0%</span></div>
+      </div>
+
+      <div class="progress">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <div id="highlighted-input"></div>
+      
+      <p class="note">Note: Spaces and punctuation count toward your total matching percentage, but yield 0 points.</p>
+    </div>
+
+    <script src="./src/js/index.mjs" type="module"></script>
+  </body>
+</html>
